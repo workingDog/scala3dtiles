@@ -108,7 +108,7 @@ import play.api.libs.functional.syntax._
   /**
     * Properties
     */
-  case class Properties(Longitude: MinMax, Latitude: MinMax, Height: MinMax)
+  case class Properties(id: Option[MinMax], Longitude: Option[MinMax], Latitude: Option[MinMax], Height: Option[MinMax])
 
   object Properties {
     implicit val fmt = Json.format[Properties]
