@@ -3,9 +3,8 @@ package com.kodekutters.cesium3dTiles
 import java.io.{File, IOException, PrintWriter}
 import play.api.libs.json.Json
 
-
 /**
-  * basic supporting utilities
+  * supporting utilities
   */
 object Util {
 
@@ -50,6 +49,5 @@ object Util {
       if (outFile.nonEmpty) writer.close()
     }
   }
-
 
 }

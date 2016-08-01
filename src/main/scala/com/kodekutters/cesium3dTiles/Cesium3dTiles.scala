@@ -14,7 +14,6 @@ package com.kodekutters.cesium3dTiles
 import play.api.libs.json._
 import play.api.libs.functional.syntax._
 
-
   /**
     * A bounding volume that encloses a tile or its contents. At least one property is required.
     * If more than one property is defined, the runtime can determine which to use.

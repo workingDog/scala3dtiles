@@ -1,12 +1,8 @@
-package com.kodekutters.czml
+package com.kodekutters.cesium3dTiles
 
-
-import com.kodekutters.cesium3dTiles.{Tileset, Util}
 import play.api.libs.json._
-
 import scala.io.Source
 import scala.language.implicitConversions
-
 
 /**
   * a basic example  ... todo
@@ -20,9 +16,9 @@ object Example1 {
     // get the Tileset object from the json document
     val tilesetOpt = Json.fromJson[Tileset](Json.parse(jsonDoc)).asOpt
 
+    // write the Tileset
     tilesetOpt match {
       case Some(s) => Util.writeTilesetToFile(s)
-
       case None => println("\n---> error processing the Tileset\n")
     }
 
