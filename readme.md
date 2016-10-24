@@ -38,5 +38,5 @@ The jar file (scala3dtiles_2.11-0.1-SNAPSHOT.jar) will be in the "./target/scala
 
 ## Status
 
-work in progress not yet usable
+work in progress not finished 
 

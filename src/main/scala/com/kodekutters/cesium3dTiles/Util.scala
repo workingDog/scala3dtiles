@@ -17,12 +17,12 @@ object Util {
     *
     * @param outFile the file name to write to, if empty or missing output will be to System.out
     * @param tileset the Tileset document, i.e. the list of Tiles
-    * @param wantPretty if true pretty print the document else not, default = true
+    * @param pretty if true pretty print the document else not, default = true
     */
-  def writeTilesetToFile(tileset: Tileset, outFile: Option[String] = None, wantPretty: Boolean = true) = {
+  def writeTilesetToFile(tileset: Tileset, outFile: Option[String] = None, pretty: Boolean = true) = {
     val writer = if (outFile.isEmpty) new PrintWriter(System.out) else new PrintWriter(new File(outFile.get))
     try {
-      if (wantPretty)
+      if (pretty)
         writer.write(Json.prettyPrint(Json.toJson(tileset)))
       else
         writer.write(Json.toJson(tileset).toString())

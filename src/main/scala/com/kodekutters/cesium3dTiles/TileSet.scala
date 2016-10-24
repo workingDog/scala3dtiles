@@ -156,8 +156,7 @@ object Properties {
   *                       (SSE), i.e., the error measured in pixels.
   * @param root           The root node.
   */
-case class Tileset(asset: Asset, properties: Option[Properties],
-                   geometricError: Double, root: Tile)
+case class Tileset(asset: Asset, properties: Option[Properties], geometricError: Double, root: Tile)
 
 object Tileset {
   implicit val fmt = Json.format[Tileset]
