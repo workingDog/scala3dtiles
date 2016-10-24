@@ -18,7 +18,7 @@ object BinaryBodyReference {
 }
 
 /**
-  * A set of properties defining application-specific metadata for features in a tile.
+  * The Batch Table contains per-feature application-specific metadata not necessarily used for rendering.
   *
   * @param extra
   * @param prop

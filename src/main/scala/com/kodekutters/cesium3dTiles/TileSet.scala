@@ -1,5 +1,6 @@
 /**
-  * Cesium 3DTiles.
+  * Cesium 3D Tiles.
+  * In 3D Tiles, a tileset is a set of tiles organized in a spatial data structure, the tree.
   *
   * The Cesium specification for streaming massive heterogeneous 3D geospatial datasets,
   * as described at: https://github.com/AnalyticalGraphicsInc/3d-tiles
