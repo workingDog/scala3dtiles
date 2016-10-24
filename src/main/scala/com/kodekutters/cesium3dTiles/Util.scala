@@ -14,13 +14,18 @@ object Util {
 
   /**
     * write the Tileset document to a file.
+    *
     * @param outFile the file name to write to, if empty or missing output will be to System.out
     * @param tileset the Tileset document, i.e. the list of Tiles
+    * @param wantPretty if true pretty print the document else not, default = true
     */
-  def writeTilesetToFile(tileset: Tileset, outFile: Option[String] = None) = {
+  def writeTilesetToFile(tileset: Tileset, outFile: Option[String] = None, wantPretty: Boolean = true) = {
     val writer = if (outFile.isEmpty) new PrintWriter(System.out) else new PrintWriter(new File(outFile.get))
     try {
-      writer.write(Json.prettyPrint(Json.toJson(tileset)))
+      if (wantPretty)
+        writer.write(Json.prettyPrint(Json.toJson(tileset)))
+      else
+        writer.write(Json.toJson(tileset).toString())
     } catch {
       case e: IOException => e.printStackTrace()
     }
@@ -33,7 +38,8 @@ object Util {
 
   /**
     * write the (json) string representation of a Tileset document to a file.
-    * @param outFile the file name to write to, if empty or missing output will be to System.out
+    *
+    * @param outFile   the file name to write to, if empty or missing output will be to System.out
     * @param tilesetjs the Tileset document as a (json) string
     */
   def writeJsToFile(tilesetjs: String, outFile: Option[String]) = {

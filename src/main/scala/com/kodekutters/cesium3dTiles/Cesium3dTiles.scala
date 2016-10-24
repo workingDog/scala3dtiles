@@ -13,7 +13,6 @@ package com.kodekutters.cesium3dTiles
 
 import play.api.libs.json.{JsObject, _}
 import play.api.libs.functional.syntax._
-
 import scala.collection.mutable
 
 /**
@@ -162,5 +161,3 @@ case class Tileset(asset: Asset, properties: Option[Properties],
 object Tileset {
   implicit val fmt = Json.format[Tileset]
 }
-
-
