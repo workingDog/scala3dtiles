@@ -9,7 +9,7 @@ scalaVersion := "2.11.8"
 
 crossScalaVersions := Seq("2.11.8")
 
-libraryDependencies ++= Seq("com.typesafe.play" %% "play-json" % "2.5.4")
+libraryDependencies ++= Seq("com.typesafe.play" %% "play-json" % "2.5.9")
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
